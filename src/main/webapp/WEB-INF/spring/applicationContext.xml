@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/mvc 
+		http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+		http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">
+	
+	
+	<!-- Activates various annotations to be detected in bean classes -->
+	
+
+	<!-- Scans the classpath for annotated components that will be auto-registered 
+		as Spring beans. For example @Controller and @Service. Make sure to set the 
+		correct base-package -->
+	<context:component-scan base-package="edu.upc.cine" />
+	<mvc:annotation-driven />
+	<!-- Configures the annotation-driven Spring MVC Controller programming 
+		model. Note that, with Spring 3.0, this tag works in Servlet MVC only! -->
+	
+
+	<!-- Load Hibernate related configuration 
+	<import resource="classpath*:/WEB-INF/spring/applicationContext-database.xml"/>-->
+	
+	 <!-- Se importan los recursos de Apache CXF necesarios -->
+    <import resource="classpath:META-INF/cxf/cxf.xml" />
+    <import resource="classpath:META-INF/cxf/cxf-extension-soap.xml" />
+    <import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
+	<!--   <import resource="classpath*:/WEB-INF/spring/applicationContext-webservice.xml"/>-->
+	
+	 <!-- Declaramos el bean implementación del Servicio Web. Como vemos, es
+         un bean más de Spring, por lo que podemos inyectarle dependencias,
+         interceptores, y demás.
+    -->
+    <bean id="generoServiceImpl" class="edu.upc.cine.service.impl.GeneroServiceImpl"/>
+    
+    <!-- Declaramos el endpoint de nuestro servicio web, indicando cual es la
+         clase de implementación. En el atributo "implementor" podemos escribir
+         el nombre completo de la clase implementación, o referenciar a un
+         bean de Spring usando un # seguido del nombre del bean.
+    -->
+    <jaxws:endpoint
+	  id="generoService"
+	  implementor="#generoServiceImpl"
+	  address="/GeneroService" /> 
+
+	
+
+</beans>
