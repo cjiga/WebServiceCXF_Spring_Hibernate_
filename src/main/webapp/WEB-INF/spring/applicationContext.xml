@@ -18,7 +18,7 @@
 	<!-- Scans the classpath for annotated components that will be auto-registered 
 		as Spring beans. For example @Controller and @Service. Make sure to set the 
 		correct base-package -->
-	<context:component-scan base-package="edu.upc.cine" />
+	<context:component-scan base-package="edu.upc.webservice" />
 	<mvc:annotation-driven />
 	<!-- Configures the annotation-driven Spring MVC Controller programming 
 		model. Note that, with Spring 3.0, this tag works in Servlet MVC only! -->
@@ -37,7 +37,7 @@
          un bean más de Spring, por lo que podemos inyectarle dependencias,
          interceptores, y demás.
     -->
-    <bean id="generoServiceImpl" class="edu.upc.cine.service.impl.GeneroServiceImpl"/>
+    <bean id="generoServiceImpl" class="edu.upc.webservice.genero.service.impl.GeneroServiceImpl"/>
     
     <!-- Declaramos el endpoint de nuestro servicio web, indicando cual es la
          clase de implementación. En el atributo "implementor" podemos escribir

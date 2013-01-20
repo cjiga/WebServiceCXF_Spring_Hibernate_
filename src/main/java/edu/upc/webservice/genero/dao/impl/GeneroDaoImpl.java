@@ -1,4 +1,4 @@
-package edu.upc.cine.dao.impl;
+package edu.upc.webservice.genero.dao.impl;
 
 import java.util.List;
 
@@ -10,8 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import edu.upc.cine.dao.GeneroDao;
-import edu.upc.cine.domain.Genero;
+import edu.upc.webservice.genero.dao.GeneroDao;
+import edu.upc.webservice.genero.domain.Genero;
 
 @Repository("generoDao")
 @Transactional

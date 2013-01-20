@@ -1,4 +1,4 @@
-package edu.upc.cine.service.impl;
+package edu.upc.webservice.genero.service.impl;
 
 import java.util.List;
 
@@ -7,11 +7,11 @@ import javax.jws.WebService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import edu.upc.cine.dao.GeneroDao;
-import edu.upc.cine.domain.Genero;
-import edu.upc.cine.service.GeneroService;
+import edu.upc.webservice.genero.dao.GeneroDao;
+import edu.upc.webservice.genero.domain.Genero;
+import edu.upc.webservice.genero.service.GeneroService;
 
-@WebService(endpointInterface="edu.upc.cine.service.GeneroService")
+@WebService(endpointInterface="edu.upc.webservice.genero.service.GeneroService")
 public class GeneroServiceImpl implements GeneroService {
 
 	protected static Logger logger = Logger.getLogger("service");

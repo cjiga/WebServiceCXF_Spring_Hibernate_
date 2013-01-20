@@ -1,4 +1,4 @@
-package edu.upc.cine.service;
+package edu.upc.webservice.genero.service;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import javax.jws.WebParam;
 import javax.jws.WebResult;
 import javax.jws.WebService;
 
-import edu.upc.cine.domain.Genero;
+import edu.upc.webservice.genero.domain.Genero;
 
 @WebService
 public interface GeneroService {

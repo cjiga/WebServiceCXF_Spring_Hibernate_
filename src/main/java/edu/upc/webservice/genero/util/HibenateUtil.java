@@ -1,4 +1,4 @@
-package edu.upc.cine.util;
+package edu.upc.webservice.genero.util;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;

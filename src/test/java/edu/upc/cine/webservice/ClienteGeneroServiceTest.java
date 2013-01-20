@@ -1,4 +1,4 @@
-package edu.upc.cine;
+package edu.upc.cine.webservice;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -12,8 +12,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import edu.upc.cine.domain.Genero;
-import edu.upc.cine.service.GeneroService;
+import edu.upc.webservice.genero.domain.Genero;
+import edu.upc.webservice.genero.service.GeneroService;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -70,7 +70,6 @@ public class ClienteGeneroServiceTest {
     }
 	
 	@Test
-	@Ignore
 	public void testGetAll(){
 		System.out.println("Genero GetAll");
 		

@@ -1,8 +1,8 @@
-package edu.upc.cine.dao;
+package edu.upc.webservice.genero.dao;
 
 import java.util.List;
 
-import edu.upc.cine.domain.Genero;
+import edu.upc.webservice.genero.domain.Genero;
 
 public interface GeneroDao {
 	

@@ -10,7 +10,7 @@
 	<!-- *********************************** -->
 	<!-- *** DECLARACION DE PROPIEDADES *** -->
 	<!-- *********************************** -->
-	<properties>
+	<properties> 
 		<springframework.version>3.0.7.RELEASE</springframework.version>
 		<cxf.version>2.2.6</cxf.version>
 		<commons-logging-version>1.1.1</commons-logging-version>

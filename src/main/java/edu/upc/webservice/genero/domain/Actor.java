@@ -1,4 +1,4 @@
-package edu.upc.cine.domain;
+package edu.upc.webservice.genero.domain;
 
 import java.io.Serializable;
 import java.util.Date;

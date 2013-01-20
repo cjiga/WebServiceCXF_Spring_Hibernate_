@@ -10,8 +10,8 @@
          puede inyectarse y utilizarse normalmente como cualquier otro objeto.
     -->
     
-    
-    <jaxws:client id="generoServiceCliente" serviceClass="edu.upc.cine.service.GeneroService" 
+     
+    <jaxws:client id="generoServiceCliente" serviceClass="edu.upc.webservice.genero.service.GeneroService" 
     			address="http://localhost:8080/ws_cine/GeneroService" />
                   
           
